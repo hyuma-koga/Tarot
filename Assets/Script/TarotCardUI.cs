@@ -11,6 +11,8 @@ public class TarotCardUI : MonoBehaviour
     public TMP_Text meaningText;
     public TMP_Text effectText;
     public TMP_Text imageNameText;
+    public RectTransform cardRootTransform; //回転用親オブジェクト
+    public GameObject backToTitleButton;
 
     /// <summary>
     /// タロットカードの表を表示
@@ -72,6 +74,11 @@ public class TarotCardUI : MonoBehaviour
         imageNameText.gameObject.SetActive(false);
         meaningText.gameObject.SetActive(false);
         effectText.gameObject.SetActive(false);
+
+        if(backToTitleButton != null)
+        {
+            backToTitleButton.SetActive(false);
+        }
     }
 
     public void ShowDetails()
@@ -81,6 +88,11 @@ public class TarotCardUI : MonoBehaviour
         imageNameText.gameObject.SetActive(true);
         meaningText.gameObject.SetActive(true);
         effectText.gameObject.SetActive(true);
+
+        if(backToTitleButton != null)
+        {
+            backToTitleButton.SetActive(true);
+        }
     }
 
 }

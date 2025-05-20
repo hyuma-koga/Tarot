@@ -9,7 +9,7 @@ public class TarotCardSpawner : MonoBehaviour
 
     private TarotCardData[] cardDatas;
 
-    private void Start()
+    public void SpawnCards()
     {
         //TarotCardDataをResourcesから読み込み
         cardDatas = Resources.LoadAll<TarotCardData>("TarotCards");
@@ -69,7 +69,6 @@ public class TarotCardSpawner : MonoBehaviour
     /// </summary>
     void OnCardSelected(TarotCardData selectedCard, GameObject cardObject)
     {
-        Debug.Log($"選ばれたカード: {selectedCard.cardName}");
         // TarotGameManagerに処理を渡す
         TarotGameManager manager = FindAnyObjectByType<TarotGameManager>();
         manager?.OnCardSelected(selectedCard, cardObject);

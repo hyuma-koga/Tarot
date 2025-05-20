@@ -42,6 +42,9 @@ public class TarotGameManager : MonoBehaviour
         if (hasCardBeenSelected) return; //多重選択防止
         hasCardBeenSelected = true;
 
+        //ここで逆位置を設定
+        selectedCard.isReversed = Random.value > 0.5f;
+
         //他のカードを非表示にする
         foreach (Transform child in cardRingTransform)
         {
@@ -217,6 +220,22 @@ public class TarotGameManager : MonoBehaviour
         }
     }
 
+    public void ResetState()
+    {
+        hasCardBeenSelected = false;
+        drawnCard = null;
+        selectedCardObject = null;
+
+        if(revealButton != null)
+        {
+            revealButton.gameObject.SetActive(false);
+        }
+
+        if(cardUI != null)
+        {
+            cardUI.HideDetails();
+        }
+    }
 
 
     
