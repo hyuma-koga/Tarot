@@ -1,0 +1,222 @@
+[
+    {
+    "number": 0,
+    "cardName": "愚者",
+    "imageName": "TheFool",
+    "meaningUpright": "自由、冒険、新しい始まり",
+    "meaningReversed": "無計画、危険、無責任",
+    "effectDescription": "2マス進む",
+    "effectType": "MoveForward",
+    "effectValue": 2
+  },
+  {
+    "number": 1,
+    "cardName": "魔術師",
+    "imageName": "TheMagician",
+    "meaningUpright": "創造力、可能性、意思",
+    "meaningReversed": "詐欺、集中力の欠如",
+    "effectDescription": "知性が1上昇する",
+    "effectType": "GainStat",
+    "effectValue": 1
+  },
+  {
+    "number": 2,
+    "cardName": "女教皇",
+    "imageName": "TheHighPriestess",
+    "meaningUpright": "直感、知識、神秘",
+    "meaningReversed": "無関心、秘密主義",
+    "effectDescription": "ターンをスキップし予見",
+    "effectType": "SkipTurn",
+    "effectValue": 0
+  },
+  {
+    "number": 3,
+    "cardName": "女帝",
+    "imageName": "TheEmpress",
+    "meaningUpright": "豊かさ、母性、創造",
+    "meaningReversed": "依存、浪費",
+    "effectDescription": "体力が2回復する",
+    "effectType": "GainStat",
+    "effectValue": 2
+  },
+  {
+    "number": 4,
+    "cardName": "皇帝",
+    "imageName": "TheEmperor",
+    "meaningUpright": "支配、秩序、安定",
+    "meaningReversed": "頑固、支配欲",
+    "effectDescription": "1マス戻る",
+    "effectType": "MoveBackward",
+    "effectValue": 1
+  },
+  {
+    "number": 5,
+    "cardName": "教皇",
+    "imageName": "TheHierophant",
+    "meaningUpright": "伝統、助言、精神性",
+    "meaningReversed": "独善的、頑固",
+    "effectDescription": "他プレイヤーと位置交換",
+    "effectType": "PlayerSwap",
+    "effectValue": 0
+  },
+  {
+    "number": 6,
+    "cardName": "恋人",
+    "imageName": "TheLovers",
+    "meaningUpright": "愛、調和、選択",
+    "meaningReversed": "葛藤、誘惑",
+    "effectDescription": "進行方向を選べる",
+    "effectType": "GlobalEvent",
+    "effectValue": 0
+  },
+  {
+    "number": 7,
+    "cardName": "戦車",
+    "imageName": "TheChariot",
+    "meaningUpright": "勝利、前進、決断",
+    "meaningReversed": "強引、無謀",
+    "effectDescription": "3マス進む",
+    "effectType": "MoveForward",
+    "effectValue": 3
+  },
+  {
+    "number": 8,
+    "cardName": "力",
+    "imageName": "Strength",
+    "meaningUpright": "勇気、内なる強さ",
+    "meaningReversed": "自信喪失、衝動",
+    "effectDescription": "防御力が1上昇する",
+    "effectType": "GainStat",
+    "effectValue": 1
+  },
+  {
+    "number": 9,
+    "cardName": "隠者",
+    "imageName": "TheHermit",
+    "meaningUpright": "内省、導き、孤独",
+    "meaningReversed": "孤立、消極",
+    "effectDescription": "1ターン休み",
+    "effectType": "SkipTurn",
+    "effectValue": 0
+  },
+  {
+    "number": 10,
+    "cardName": "運命の輪",
+    "imageName": "WheelOfFortune",
+    "meaningUpright": "変化、幸運、転機",
+    "meaningReversed": "不安定、不可避",
+    "effectDescription": "サイコロを振り直す",
+    "effectType": "GlobalEvent",
+    "effectValue": 0
+  },
+  {
+    "number": 11,
+    "cardName": "正義",
+    "imageName": "Justice",
+    "meaningUpright": "公平、正義、因果応報",
+    "meaningReversed": "不正、偏見",
+    "effectDescription": "ステータスを均等にする",
+    "effectType": "GlobalEvent",
+    "effectValue": 0
+  },
+  {
+    "number": 12,
+    "cardName": "吊るされた男",
+    "imageName": "TheHangedMan",
+    "meaningUpright": "犠牲、視点の転換、受容",
+    "meaningReversed": "停滞、無力",
+    "effectDescription": "1ターンスキップする",
+    "effectType": "SkipTurn",
+    "effectValue": 0
+  },
+  {
+    "number": 13,
+    "cardName": "死神",
+    "imageName": "Death",
+    "meaningUpright": "終わり、新しい始まり",
+    "meaningReversed": "抵抗、損失",
+    "effectDescription": "すべての効果をリセット",
+    "effectType": "GlobalEvent",
+    "effectValue": 0
+  },
+  {
+    "number": 14,
+    "cardName": "節制",
+    "imageName": "Temperance",
+    "meaningUpright": "調和、節度、バランス",
+    "meaningReversed": "極端、浪費",
+    "effectDescription": "HPとMPを1ずつ回復",
+    "effectType": "GainStat",
+    "effectValue": 2
+  },
+  {
+    "number": 15,
+    "cardName": "悪魔",
+    "imageName": "TheDevil",
+    "meaningUpright": "束縛、欲望、誘惑",
+    "meaningReversed": "依存、無力感",
+    "effectDescription": "次ターン行動できない",
+    "effectType": "SkipTurn",
+    "effectValue": 0
+  },
+  {
+    "number": 16,
+    "cardName": "塔",
+    "imageName": "TheTower",
+    "meaningUpright": "崩壊、啓示、衝撃",
+    "meaningReversed": "混乱、分裂",
+    "effectDescription": "1マス戻る",
+    "effectType": "MoveBackward",
+    "effectValue": 1
+  },
+  {
+    "number": 17,
+    "cardName": "星",
+    "imageName": "TheStar",
+    "meaningUpright": "希望、癒し、ひらめき",
+    "meaningReversed": "期待外れ、失望",
+    "effectDescription": "次の行動に+1ボーナス",
+    "effectType": "GainStat",
+    "effectValue": 1
+  },
+  {
+    "number": 18,
+    "cardName": "月",
+    "imageName": "TheMoon",
+    "meaningUpright": "幻想、不安、直感",
+    "meaningReversed": "混乱、誤解",
+    "effectDescription": "次の行動は選べない",
+    "effectType": "LoseStat",
+    "effectValue": 1
+  },
+  {
+    "number": 19,
+    "cardName": "太陽",
+    "imageName": "TheSun",
+    "meaningUpright": "成功、喜び、活力",
+    "meaningReversed": "傲慢、無防備",
+    "effectDescription": "HPを2回復",
+    "effectType": "GainStat",
+    "effectValue": 2
+  },
+  {
+    "number": 20,
+    "cardName": "審判",
+    "imageName": "Judgement",
+    "meaningUpright": "再生、評価、目覚め",
+    "meaningReversed": "後悔、執着",
+    "effectDescription": "過去の効果を再発動",
+    "effectType": "GlobalEvent",
+    "effectValue": 0
+  },
+  {
+    "number": 21,
+    "cardName": "世界",
+    "imageName": "TheWorld",
+    "meaningUpright": "完成、達成、統合",
+    "meaningReversed": "未完、制限",
+    "effectDescription": "好きなマスに移動",
+    "effectType": "MoveForward",
+    "effectValue": 6
+  }
+]
