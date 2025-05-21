@@ -7,13 +7,10 @@ public class TarotGameManager : MonoBehaviour
     public TarotCardUI cardUI;
     public TarotCardData[] allCards;
     public Button revealButton;    //表裏表示ボタン
-
     public Transform cardRingTransform; //CardRing（全カードの親）
     private GameObject selectedCardObject;
-
     private TarotCardData drawnCard;
     private bool hasCardBeenSelected = false;
-
     private Vector3 cameraInitialPosition;
     private Quaternion cameraInitialRotation;
 
@@ -76,15 +73,12 @@ public class TarotGameManager : MonoBehaviour
     }
     private IEnumerator MoveCardToCenter(GameObject card, TarotCardData cardData)
     {
-        
-
         // 理想のTransformに基づいて設定
         Vector3 targetPos = new Vector3(0f, 2.269f, -9.6f);
         Quaternion targetRot = Quaternion.Euler(90f, 0f, -180f);  // 正面向き
 
         Camera.main.transform.position = new Vector3(0f, 2.3f, -13.42f);
         Camera.main.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
-
 
         float duration = 1f;
         float elapsed = 0f;
@@ -109,7 +103,6 @@ public class TarotGameManager : MonoBehaviour
 
         drawnCard = cardData;
         selectedCardObject = card; // 最後に保持
-
     }
 
     public void RevealCard()
@@ -142,25 +135,6 @@ public class TarotGameManager : MonoBehaviour
 
     private void ApplyCardEffect(TarotCardData card)
     {
-        Debug.Log($"効果発動:{card.effectType}値:{card.effectValue}");
-
-        //仮処理系（実ゲームではここに処理を書く）
-        switch (card.effectType)
-        {
-            case EffectType.MoveForward:
-                Debug.Log($"プレイヤーが{card.effectValue}マス前進!");
-                break;
-            case EffectType.GainStat:
-                Debug.Log($"ステータスが{card.effectValue}増加!");
-                break;
-            case EffectType.SkipTurn:
-                Debug.Log($"ターンをスキップ!");
-                break;
-            default:
-                Debug.Log("特別なイベントが発動!");
-                break;
-        }
-
         //演出（音・エフェクト）もここで再生可能
         if (card.cardSound != null)
         {

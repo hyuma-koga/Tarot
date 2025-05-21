@@ -37,10 +37,6 @@ public class TarotCardImporter
         // ScriptableObjectの生成
         foreach (var jsonCard in wrapper.cards)  // ← ここ修正
         {
-
-            Debug.Log($"✅ 読み込み成功: {jsonCard.cardName}, {jsonCard.meaningUpright}, {jsonCard.effectDescription}");
-
-
             TarotCardData card = ScriptableObject.CreateInstance<TarotCardData>();
 
             card.number = jsonCard.number;
@@ -48,18 +44,13 @@ public class TarotCardImporter
             card.imageName = jsonCard.imageName;
             card.meaningUpright = jsonCard.meaningUpright;
             card.meaningReversed = jsonCard.meaningReversed;
-            card.effectDescription = jsonCard.effectDescription;
-            card.effectValue = jsonCard.effectValue;
-
-            if (System.Enum.TryParse(jsonCard.effectType, out EffectType result))
-            {
-                card.effectType = result;
-            }
+            card.discriptionUpright = jsonCard.discriptionUpright;
+            card.discriptionReversed = jsonCard.discriptionReversed;
 
             // Resourcesから画像読み込み
             card.illustration = Resources.Load<Sprite>("TarotImages/" + jsonCard.imageName);
 
-            string assetPath = Path.Combine(savePath, $"Tarot_{card.number}_{card.cardName}.asset");
+            string assetPath = Path.Combine(savePath, $"Tarot_{card.number}.asset");
 
             // 既存アセットがあれば削除
             if (File.Exists(assetPath))
@@ -84,9 +75,8 @@ public class TarotCardJsonData
     public string imageName;
     public string meaningUpright;
     public string meaningReversed;
-    public string effectDescription;
-    public string effectType;
-    public int effectValue;
+    public string discriptionUpright;
+    public string discriptionReversed;
 }
 
 [System.Serializable]

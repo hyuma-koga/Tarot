@@ -528,7 +528,7 @@ GameObject:
   - component: {fileID: 311240818}
   - component: {fileID: 311240817}
   m_Layer: 5
-  m_Name: CardEffect_Text
+  m_Name: CardDiscription_Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -551,7 +551,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 720, y: 410}
+  m_SizeDelta: {x: 700, y: 1305.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &311240817
 MonoBehaviour:
@@ -600,8 +600,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.8
-  m_fontSizeBase: 48.8
+  m_fontSize: 35.55
+  m_fontSizeBase: 35.55
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1508,8 +1508,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 118
-  m_fontSizeBase: 118
+  m_fontSize: 98.33
+  m_fontSizeBase: 98.33
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1730,7 +1730,7 @@ MonoBehaviour:
   cardBackSprite: {fileID: 21300000, guid: a629d8ca05220a648a19d0ba9f12b67c, type: 3}
   cardNameText: {fileID: 690406139}
   meaningText: {fileID: 1511515586}
-  effectText: {fileID: 311240817}
+  discriptionText: {fileID: 311240817}
   imageNameText: {fileID: 169624763}
   cardRootTransform: {fileID: 1480449917}
   backToTitleButton: {fileID: 1111963959}
@@ -1816,8 +1816,8 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1868088780}
   m_HandleRect: {fileID: 1868088779}
   m_Direction: 2
-  m_Value: 0.99999976
-  m_Size: 0.6903991
+  m_Value: 0.9999998
+  m_Size: 0.4656069
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2701,7 +2701,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 720, y: 274.7}
+  m_SizeDelta: {x: 700, y: 274.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511515586
 MonoBehaviour:
@@ -3551,28 +3551,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardUI: {fileID: 850946648}
   allCards:
-  - {fileID: 11400000, guid: 8d06afd0c653e1a4398a802319610ffc, type: 2}
-  - {fileID: 11400000, guid: 96adbc7f21e01d3418aafcd89aa0635b, type: 2}
-  - {fileID: 11400000, guid: ac11a6f244ec61c4497d8198b2efb80d, type: 2}
-  - {fileID: 11400000, guid: 29dff556fa8a25343aaca83591164b2e, type: 2}
-  - {fileID: 11400000, guid: 48145957fdd4fc14f9bc07eb3eb4ba3c, type: 2}
-  - {fileID: 11400000, guid: b5d526f57e0fd5b4e9da9fe185115c6e, type: 2}
-  - {fileID: 11400000, guid: 3b670c57287c57a41adf57d0a93f7c50, type: 2}
-  - {fileID: 11400000, guid: 382229649c59fd44d9a157f6b62b0a36, type: 2}
-  - {fileID: 11400000, guid: 60c0595376e1cf94699979888f2ad34f, type: 2}
-  - {fileID: 11400000, guid: c8c3c80ec52ddcf4a85034a4eb6db8b9, type: 2}
-  - {fileID: 11400000, guid: 9fc592fb4fbc26a4fb2414a866648765, type: 2}
-  - {fileID: 11400000, guid: 033e08f88bc92234e96e17cd925472d7, type: 2}
-  - {fileID: 11400000, guid: 88443f68e81a61e44aaa5d9e7b9a1a14, type: 2}
-  - {fileID: 11400000, guid: bcd85eec0a75a274990d169124e52d02, type: 2}
-  - {fileID: 11400000, guid: 71ffe75b82c66bb439f1d79fb754b4e3, type: 2}
-  - {fileID: 11400000, guid: ce5a0c357107dd84cb903822aa123820, type: 2}
-  - {fileID: 11400000, guid: a06d2b7beb6d68f40bceb513c6c56042, type: 2}
-  - {fileID: 11400000, guid: af66f9406c3306d4888d90dd2cf3a551, type: 2}
-  - {fileID: 11400000, guid: 509e7ce13e0a0014c8e4ea2f49292898, type: 2}
-  - {fileID: 11400000, guid: fd68c7266a8c1fb4e92a4c03f6696310, type: 2}
-  - {fileID: 11400000, guid: b6231a940383f56489a5c03f9d662c69, type: 2}
-  - {fileID: 11400000, guid: 51d0bc7d6b1bd2d46b798a49244c1e91, type: 2}
+  - {fileID: 11400000, guid: 6c9409b78a49a3c43bf0635a6d70f7c3, type: 2}
+  - {fileID: 11400000, guid: 816134f505f2d8741a1d741e7b0de55b, type: 2}
+  - {fileID: 11400000, guid: 613a9941643ea2e4987ead415e0185cc, type: 2}
+  - {fileID: 11400000, guid: 859a8273e6c6a9f468f0bbbbd8b74975, type: 2}
+  - {fileID: 11400000, guid: 98cf97a537da51945a0b3cad77142a78, type: 2}
+  - {fileID: 11400000, guid: 6c7fa9c5ea9f40544b0f898cc7cb6f97, type: 2}
+  - {fileID: 11400000, guid: 61a4eec13b864334bbaab1add650313a, type: 2}
+  - {fileID: 11400000, guid: d10a934fa79bb69449f848e68f44e457, type: 2}
+  - {fileID: 11400000, guid: 998341cbd19e6ed44b284d01f854bace, type: 2}
+  - {fileID: 11400000, guid: 7018b9c2d1cdbb148a482d9570815970, type: 2}
+  - {fileID: 11400000, guid: 8e07cfdd96a2c874da257e525da8cd9b, type: 2}
+  - {fileID: 11400000, guid: 042d244d9350e194287a0c993eb5dfbb, type: 2}
+  - {fileID: 11400000, guid: 812d1d625884add43928be3fe5b68114, type: 2}
+  - {fileID: 11400000, guid: 2670f2bd43e313d4c915a900749f8372, type: 2}
+  - {fileID: 11400000, guid: f529490e77376504db40af4463b456e4, type: 2}
+  - {fileID: 11400000, guid: 0e5ca0902234b5841867fef448cd250e, type: 2}
+  - {fileID: 11400000, guid: 6432a8d37f4f56b4ebb94c467f07484b, type: 2}
+  - {fileID: 11400000, guid: 5be14a8f290670c40a40d20ff66ad937, type: 2}
+  - {fileID: 11400000, guid: cbe202e1a3684d54582cd2c785a07c4e, type: 2}
+  - {fileID: 11400000, guid: 87545c8a20d29bb42aa2317cfc858a02, type: 2}
+  - {fileID: 11400000, guid: 7d41ee8abf6ea1b4db8e2656ebf98082, type: 2}
+  - {fileID: 11400000, guid: ac2848176e20da84582f294f15893ec3, type: 2}
   revealButton: {fileID: 519146530}
   cardRingTransform: {fileID: 64057425}
 --- !u!4 &1959487567

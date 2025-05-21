@@ -9,7 +9,7 @@ public class TarotCardUI : MonoBehaviour
     public Sprite cardBackSprite;
     public TMP_Text cardNameText;
     public TMP_Text meaningText;
-    public TMP_Text effectText;
+    public TMP_Text discriptionText;
     public TMP_Text imageNameText;
     public RectTransform cardRootTransform; //回転用親オブジェクト
     public GameObject backToTitleButton;
@@ -33,7 +33,9 @@ public class TarotCardUI : MonoBehaviour
             meaningText.text = cardData.isReversed
                 ? $"逆位置：{cardData.meaningReversed}"
                 : $"正位置：{cardData.meaningUpright}";
-            effectText.text = $"効果:{cardData.effectDescription}";
+            discriptionText.text = cardData.isReversed
+               ? $"{cardData.discriptionReversed}"
+               : $"{cardData.discriptionUpright}";
 
             //画像を上下反転
             cardImage.rectTransform.localRotation = cardData.isReversed
@@ -56,7 +58,7 @@ public class TarotCardUI : MonoBehaviour
         cardNameText.text = "";
         imageNameText.text = "";
         meaningText.text = "";
-        effectText.text = "";
+        discriptionText.text = "";
     }
 
     /// <summary>
@@ -73,7 +75,7 @@ public class TarotCardUI : MonoBehaviour
         cardNameText.gameObject.SetActive(false);
         imageNameText.gameObject.SetActive(false);
         meaningText.gameObject.SetActive(false);
-        effectText.gameObject.SetActive(false);
+        discriptionText.gameObject.SetActive(false);
 
         if(backToTitleButton != null)
         {
@@ -87,7 +89,7 @@ public class TarotCardUI : MonoBehaviour
         cardNameText.gameObject.SetActive(true);
         imageNameText.gameObject.SetActive(true);
         meaningText.gameObject.SetActive(true);
-        effectText.gameObject.SetActive(true);
+        discriptionText.gameObject.SetActive(true);
 
         if(backToTitleButton != null)
         {
