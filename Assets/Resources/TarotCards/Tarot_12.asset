@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 12
   cardName: "\u540A\u308B\u3055\u308C\u305F\u7537"
-  imageName: TheHangedMan
+  imageName: The HangedMan
   illustration: {fileID: 21300000, guid: 544b607bf45470d45b62500712e45c08, type: 3}
   meaningUpright: "\u4FEE\u884C\u3001\u8A66\u7DF4\u3001\u5FCD\u8010\u3001\u6291\u5236\u3001\u81EA\u5DF1\u7814\u947D\u306E\u52AA\u529B\u3001\u6210\u9577\u306E\u305F\u3081\u306E\u8A66\u7DF4"
   meaningReversed: "\u5F92\u52B4\u306B\u7D42\u308F\u308B\u52AA\u529B\u3001\u81EA\u66B4\u81EA\u68C4\u3001\u6B32\u671B\u306B\u8CA0\u3051\u308B\u3001\u5831\u308F\u308C\u306A\u3044\u52AA\u529B\u3001\u6295\u3052\u3084\u308A"

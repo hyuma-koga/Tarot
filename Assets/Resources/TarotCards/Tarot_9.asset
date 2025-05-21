@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 9
   cardName: "\u96A0\u8005"
-  imageName: TheHermit
+  imageName: The Hermit
   illustration: {fileID: 21300000, guid: 23780c26d947fb44bb3017e1dcfb6990, type: 3}
   meaningUpright: "\u7D4C\u9A13\u3001\u9AD8\u5C1A\u306A\u52A9\u8A00\u3001\u7CBE\u795E\u6027\u3001\u609F\u308A\u3084\u5185\u89B3\u3001\u5358\u72EC\u884C\u52D5\u3001\u614E\u91CD\u3001\u601D\u3044\u3084\u308A"
   meaningReversed: "\u9589\u9396\u7684\u3001\u9670\u6E7F\u3001\u6D88\u6975\u7684\u3001\u52A3\u7B49\u611F\u3001\u60B2\u89B3\u7684\u3001\u4EBA\u751F\u3067\u306E\u8FF7\u3044\u3001\u601D\u3044\u8FBC\u307F"

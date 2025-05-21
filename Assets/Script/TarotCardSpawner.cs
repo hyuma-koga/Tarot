@@ -20,6 +20,7 @@ public class TarotCardSpawner : MonoBehaviour
             return;
         }
 
+        cardDatas = ShuffleArray(cardDatas);
 
         for (int i = 0; i < cardDatas.Length; i++)
         {
@@ -72,5 +73,18 @@ public class TarotCardSpawner : MonoBehaviour
         // TarotGameManager‚Éˆ—‚ð“n‚·
         TarotGameManager manager = FindAnyObjectByType<TarotGameManager>();
         manager?.OnCardSelected(selectedCard, cardObject);
+    }
+
+    private TarotCardData[] ShuffleArray(TarotCardData[] array)
+    {
+        TarotCardData[] newArray = (TarotCardData[])array.Clone();
+        for(int i = 0; i < newArray.Length; i++)
+        {
+            int rand = Random.Range(i, newArray.Length);
+            var temp = newArray[i];
+            newArray[i] = newArray[rand];
+            newArray[rand] = temp;
+        }
+        return newArray;
     }
 }

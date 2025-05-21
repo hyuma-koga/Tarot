@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 17
   cardName: "\u661F"
-  imageName: TheStar
+  imageName: The Star
   illustration: {fileID: 21300000, guid: f857dcde30eab7b4684646b230934967, type: 3}
   meaningUpright: "\u5E0C\u671B\u3001\u5922\u3001\u76F4\u611F\u3001\u9583\u304D\u3001\u767A\u60F3\u3001\u970A\u611F\u3001\u9858\u3044\u304C\u53F6\u3046\u3001\u5C06\u6765\u306E\u76EE\u6A19"
   meaningReversed: "\u5931\u671B\u3001\u7D76\u671B\u3001\u7121\u6C17\u529B\u3001\u9AD8\u671B\u307F\u3001\u7A7A\u56DE\u308A\u3001\u5E7B\u60F3\u7684\u3001\u5730\u306B\u8DB3\u304C\u7740\u304B\u306A\u3044"

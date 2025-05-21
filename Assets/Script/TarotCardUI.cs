@@ -13,6 +13,14 @@ public class TarotCardUI : MonoBehaviour
     public TMP_Text imageNameText;
     public RectTransform cardRootTransform; //回転用親オブジェクト
     public GameObject backToTitleButton;
+    public GameObject descriptionBackgroundPanel;  // ← 背景パネルをInspectorからアサイン
+    public GameObject meaningBackgroundPanel;  // ← 背景パネルをInspectorからアサイン
+
+    public RectTransform meaningBackgroundPanelRect; 
+    public TextMeshProUGUI meaningTextTMP; 
+    public RectTransform descriptionBackgroundPanelRect; 
+    public TextMeshProUGUI discriptionTextTMP; 
+
 
     /// <summary>
     /// タロットカードの表を表示
@@ -77,9 +85,19 @@ public class TarotCardUI : MonoBehaviour
         meaningText.gameObject.SetActive(false);
         discriptionText.gameObject.SetActive(false);
 
-        if(backToTitleButton != null)
+        if (backToTitleButton != null)
         {
             backToTitleButton.SetActive(false);
+        }
+
+        if (descriptionBackgroundPanel != null)
+        {
+            descriptionBackgroundPanel.SetActive(false);  // 背景パネルを表示
+        }
+
+        if (meaningBackgroundPanel != null)
+        {
+            meaningBackgroundPanel.SetActive(false);  // 背景パネルを表示
         }
     }
 
@@ -94,6 +112,30 @@ public class TarotCardUI : MonoBehaviour
         if(backToTitleButton != null)
         {
             backToTitleButton.SetActive(true);
+        }
+
+        if (descriptionBackgroundPanel != null)
+        {
+            descriptionBackgroundPanel.SetActive(true);  // 背景パネルを表示
+        }
+
+        if (meaningBackgroundPanel != null)
+        {
+            meaningBackgroundPanel.SetActive(true);  // 背景パネルを表示
+        }
+
+        if (descriptionBackgroundPanelRect != null && discriptionTextTMP != null)
+        {
+            float targetHeight = discriptionTextTMP.preferredHeight + 60f; // +余白分
+            Vector2 currentSize = descriptionBackgroundPanelRect.sizeDelta;
+            descriptionBackgroundPanelRect.sizeDelta = new Vector2(currentSize.x, targetHeight);
+        }
+
+        if (meaningBackgroundPanelRect != null && meaningTextTMP != null)
+        {
+            float targetHeight = meaningTextTMP.preferredHeight + 60f; // +余白分
+            Vector2 currentSize = meaningBackgroundPanelRect.sizeDelta;
+            meaningBackgroundPanelRect.sizeDelta = new Vector2(currentSize.x, targetHeight);
         }
     }
 

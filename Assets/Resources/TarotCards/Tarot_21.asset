@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   number: 21
   cardName: "\u4E16\u754C"
-  imageName: TheWorld
+  imageName: The World
   illustration: {fileID: 21300000, guid: a03c7ffe96a3b134a84ff4590b7ece44, type: 3}
   meaningUpright: "\u6210\u5C31\u3001\u5B8C\u6210\u3001\u512A\u52DD\u3001\u5408\u683C\u3001\u7D20\u6674\u3089\u3057\u3044\u7D50\u672B\u3001\u30D1\u30FC\u30D5\u30A7\u30AF\u30C8\u3001\u6C38\u9060"
   meaningReversed: "\u8870\u9000\u3001\u5815\u843D\u3001\u4E2D\u9014\u534A\u7AEF\u3001\u672A\u5B8C\u6210\u3001\u4F4E\u8FF7\u3001\u8ABF\u548C\u306E\u5D29\u58CA\u3001\u5747\u8861\u304C\u5D29\u308C\u308B"
