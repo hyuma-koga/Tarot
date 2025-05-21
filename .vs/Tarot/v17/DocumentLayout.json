@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "D:\\Unity\\Tarot\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|d:\\unity\\tarot\\assets\\script\\tarotcardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotcardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\tarotgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\tarotuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotuimanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\tarotgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotgamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\tarotcardspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotcardspawner.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\billboardtocamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\billboardtocamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\cardselector.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,12 +23,16 @@
       "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\cardringrotator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1D36A0F5-5253-14BE-0C6F-4020370C7D15}|Assembly-CSharp-Editor.csproj|D:\\Unity\\Tarot\\assets\\editor\\tarotcardimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1D36A0F5-5253-14BE-0C6F-4020370C7D15}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\tarotcardimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|D:\\Unity\\Tarot\\assets\\script\\tarotcarddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotcarddata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|d:\\unity\\tarot\\assets\\script\\tarotcardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{877DC523-1E9D-1179-F78E-80DDE897ADFE}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\tarotcardui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1D36A0F5-5253-14BE-0C6F-4020370C7D15}|Assembly-CSharp-Editor.csproj|D:\\Unity\\Tarot\\assets\\editor\\tarotcardimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1D36A0F5-5253-14BE-0C6F-4020370C7D15}|Assembly-CSharp-Editor.csproj|solutionrelative:assets\\editor\\tarotcardimporter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
@@ -56,25 +52,14 @@
               "RelativeDocumentMoniker": "Assets\\Script\\TarotUIManager.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\TarotUIManager.cs",
               "RelativeToolTip": "Assets\\Script\\TarotUIManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-20T14:42:04.031Z"
+              "WhenOpened": "2025-05-20T14:42:04.031Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "BillboardToCamera.cs",
-              "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\BillboardToCamera.cs",
-              "RelativeDocumentMoniker": "Assets\\Script\\BillboardToCamera.cs",
-              "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\BillboardToCamera.cs",
-              "RelativeToolTip": "Assets\\Script\\BillboardToCamera.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAARAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T15:06:33.731Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "CardRingRotator.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\CardRingRotator.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CardRingRotator.cs",
@@ -82,31 +67,34 @@
               "RelativeToolTip": "Assets\\Script\\CardRingRotator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T14:56:57.082Z"
+              "WhenOpened": "2025-05-16T14:56:57.082Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "CardSelector.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\CardSelector.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\CardSelector.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\CardSelector.cs",
               "RelativeToolTip": "Assets\\Script\\CardSelector.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAA0wDoAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:36:44.335Z"
+              "WhenOpened": "2025-05-16T10:36:44.335Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "TarotCardSpawner.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\TarotCardSpawner.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TarotCardSpawner.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\TarotCardSpawner.cs",
               "RelativeToolTip": "Assets\\Script\\TarotCardSpawner.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAwAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-16T10:26:27.216Z"
+              "WhenOpened": "2025-05-16T10:26:27.216Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -116,38 +104,40 @@
               "RelativeDocumentMoniker": "Assets\\Editor\\TarotCardImporter.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Editor\\TarotCardImporter.cs",
               "RelativeToolTip": "Assets\\Editor\\TarotCardImporter.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEAAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAAwEAAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T14:12:08.957Z"
+              "WhenOpened": "2025-05-15T14:12:08.957Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "TarotGameManager.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\TarotGameManager.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TarotGameManager.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\TarotGameManager.cs",
               "RelativeToolTip": "Assets\\Script\\TarotGameManager.cs",
-              "ViewState": "AgIAAMUAAAAAAAAAAAAYwOsAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAADwv0gAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T08:48:42.554Z"
+              "WhenOpened": "2025-05-15T08:48:42.554Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "TarotCardUI.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\TarotCardUI.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TarotCardUI.cs",
               "ToolTip": "D:\\Unity\\Tarot\\Assets\\Script\\TarotCardUI.cs",
               "RelativeToolTip": "Assets\\Script\\TarotCardUI.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAADwvw4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAwA4AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-15T08:42:05.043Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 5,
               "Title": "TarotCardData.cs",
               "DocumentMoniker": "D:\\Unity\\Tarot\\Assets\\Script\\TarotCardData.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\TarotCardData.cs",
@@ -155,7 +145,8 @@
               "RelativeToolTip": "Assets\\Script\\TarotCardData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-15T08:16:46.159Z"
+              "WhenOpened": "2025-05-15T08:16:46.159Z",
+              "EditorCaption": ""
             }
           ]
         }

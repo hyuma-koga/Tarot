@@ -14,6 +14,10 @@ public class TarotGameManager : MonoBehaviour
     private TarotCardData drawnCard;
     private bool hasCardBeenSelected = false;
 
+    private Vector3 cameraInitialPosition;
+    private Quaternion cameraInitialRotation;
+
+
     private void Awake()
     {
         allCards = Resources.LoadAll<TarotCardData>("TarotCards");
@@ -28,6 +32,8 @@ public class TarotGameManager : MonoBehaviour
         {
             revealButton.gameObject.SetActive(false);
             revealButton.onClick.AddListener(RevealCard);
+            cameraInitialPosition = Camera.main.transform.position;
+            cameraInitialRotation = Camera.main.transform.rotation;
         }
 
         // 説明UIを非表示
@@ -59,6 +65,11 @@ public class TarotGameManager : MonoBehaviour
         if(selector != null)
         {
             selector.enabled = false;
+        }
+        if (revealButton != null)
+        {
+            revealButton.gameObject.SetActive(true);
+            revealButton.interactable = true;
         }
 
         StartCoroutine(MoveCardToCenter(cardObject, selectedCard));
@@ -122,10 +133,13 @@ public class TarotGameManager : MonoBehaviour
         // ボタン自体を削除
         if (revealButton != null)
         {
-            Destroy(revealButton.gameObject);
-            revealButton = null; // 保険（今後の参照でエラー防止）
+            revealButton.gameObject.SetActive(false);
         }
+
+        //結果の背景を表示
+        FindAnyObjectByType<TarotUIManager>()?.ShowResultScreen();
     }
+
     private void ApplyCardEffect(TarotCardData card)
     {
         Debug.Log($"効果発動:{card.effectType}値:{card.effectValue}");
@@ -159,54 +173,6 @@ public class TarotGameManager : MonoBehaviour
         }
     }
 
-//    private void Update()
-//    {
-//#if UNITY_2023_1_OR_NEWER
-//        var allManagers = UnityEngine.Object.FindObjectsByType<TarotGameManager>(FindObjectsSortMode.None);
-//#else
-//    var allManagers = FindObjectsOfType<TarotGameManager>();
-//#endif
-//    }
-    ///// <summary>
-    ///// カードを1枚引き、裏面表示
-    ///// </summary>
-    //public void DrawCard()
-    //{
-    //    Debug.Log("DrawCard() が呼ばれました！");
-    //    if (allCards == null || allCards.Length == 0)
-    //    {
-    //        Debug.LogError("allCards が空です！");
-    //        return;
-    //    }
-
-    //    int index = Random.Range(0, allCards.Length);
-    //    Debug.Log($"ランダム選択 index: {index}");
-
-
-    //    drawnCard = allCards[index];
-
-    //    if (drawnCard == null)
-    //    {
-    //        Debug.LogError($"❌ drawnCard が null！（allCards[{index}] にデータが入っていません）");
-    //        return;
-    //    }
-
-    //    drawnCard.isReversed = Random.value > 0.5f;
-
-    //    cardUI.ShowCardBack();
-
-    //    //自動めくりなら数秒後に表面表示
-    //    //StartCoroutine(RevealAfterDelay(2.0f));
-    //}
-
-    /// <summary>
-    /// 数秒後にカードを自動でめくる
-    /// </summary>
-    private IEnumerator RevealAfterDelay(float delay)
-    {
-        yield return new WaitForSeconds(delay);
-        RevealCard();
-    }
 
     public void SetSelectedCard(TarotCardData card)
     {
@@ -237,6 +203,13 @@ public class TarotGameManager : MonoBehaviour
         }
     }
 
+    public void ResetCameraPosition()
+    {
+        Camera.main.transform.position = cameraInitialPosition;
+        Camera.main.transform.rotation = cameraInitialRotation;
+    }
 
-    
+
+
+
 }
