@@ -42,6 +42,9 @@ public class TarotGameManager : MonoBehaviour
 
     public void OnCardSelected(TarotCardData selectedCard, GameObject cardObject)
     {
+
+        drawnCard = selectedCard;
+
         if (hasCardBeenSelected) return; //多重選択防止
         hasCardBeenSelected = true;
 
@@ -63,11 +66,7 @@ public class TarotGameManager : MonoBehaviour
         {
             selector.enabled = false;
         }
-        if (revealButton != null)
-        {
-            revealButton.gameObject.SetActive(true);
-            revealButton.interactable = true;
-        }
+
 
         StartCoroutine(MoveCardToCenter(cardObject, selectedCard));
     }
@@ -101,7 +100,7 @@ public class TarotGameManager : MonoBehaviour
             revealButton.interactable = true;
         }
 
-        drawnCard = cardData;
+
         selectedCardObject = card; // 最後に保持
     }
 
