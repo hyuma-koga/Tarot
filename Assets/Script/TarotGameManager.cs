@@ -1,6 +1,9 @@
 ﻿using System.Collections;
+using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
+
 
 public class TarotGameManager : MonoBehaviour
 {
@@ -14,6 +17,9 @@ public class TarotGameManager : MonoBehaviour
     private Vector3 cameraInitialPosition;
     private Quaternion cameraInitialRotation;
 
+    public static List<CardHistoryEntry> historyList = new List<CardHistoryEntry>();
+
+    private bool hasSavedHistory = false;
 
     private void Awake()
     {
@@ -106,12 +112,14 @@ public class TarotGameManager : MonoBehaviour
 
     public void RevealCard()
     {
-        Debug.Log("RevealCard() が呼ばれました！");
-        if (drawnCard == null)
+        if (drawnCard == null || hasSavedHistory) //重複防止
         {
-            Debug.LogWarning("drawnCard が null です！");
+            Debug.LogWarning("RevealCard() が2回呼ばれたか、drawnCardがnull");
             return;
         }
+
+        hasSavedHistory = true; //フラグON（これより後は保存不可）
+
         if (selectedCardObject != null)
         {
             Destroy(selectedCardObject);
@@ -121,6 +129,8 @@ public class TarotGameManager : MonoBehaviour
         cardUI.ShowCardFront(drawnCard);
         cardUI.ShowDetails(); // ← ここで表示！
         ApplyCardEffect(drawnCard);
+
+        SaveToHistory(drawnCard);  //１回だけ確実に保存
 
         // ボタン自体を削除
         if (revealButton != null)
@@ -162,6 +172,7 @@ public class TarotGameManager : MonoBehaviour
     public void ResetState()
     {
         hasCardBeenSelected = false;
+        hasSavedHistory = false;
         drawnCard = null;
         selectedCardObject = null;
 
@@ -182,7 +193,17 @@ public class TarotGameManager : MonoBehaviour
         Camera.main.transform.rotation = cameraInitialRotation;
     }
 
-
-
-
+    private void SaveToHistory(TarotCardData card)
+    {
+        CardHistoryEntry entry = new CardHistoryEntry
+        {
+            cardName = card.cardName,
+            imageName = card.imageName,
+            isReversed = card.isReversed,
+            meaning = card.isReversed ? card.meaningReversed : card.meaningUpright,
+            description = card.isReversed ? card.discriptionReversed : card.discriptionUpright,
+            date = System.DateTime.Now.ToString("yyyy/MM/dd")
+        };
+        historyList.Add(entry);
+    }
 }
