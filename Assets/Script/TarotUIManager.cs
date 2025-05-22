@@ -10,6 +10,7 @@ public class TarotUIManager : MonoBehaviour
     [SerializeField] private TarotGameManager tarotGameManager;
     [SerializeField] private TarotCardUI tarotCardUI;
     [SerializeField] private CardHistoryUI historyUI;
+    [SerializeField] private GameObject noHistoryPopup;
     public void OnClickFortuneButton()
     {
         tarotGameManager.ResetCameraPosition(); // ← 必ず最初に呼ぶ
@@ -49,19 +50,32 @@ public class TarotUIManager : MonoBehaviour
 
     public void OnClickHistoryButton()
     {
-        // 先にパネルを表示（CardHistoryUI はこの瞬間アクティブになる）
+        Debug.Log($"履歴の数: {TarotGameManager.historyList.Count}");
+
+        if (TarotGameManager.historyList.Count == 0)
+        {
+            Debug.Log("履歴が空なので開けません！");
+            if (noHistoryPopup != null)
+                StartCoroutine(ShowNoHistoryPopup());
+            return;
+        }
+
+        if (noHistoryPopup != null && noHistoryPopup.activeSelf)
+        {
+            noHistoryPopup.SetActive(false); // 念のため確実に閉じる
+        }
+
         historyUI.historyPanel.SetActive(true);
-
-        // 自分（TarotUIManager）は常にアクティブなので、ここで Coroutine 実行
-        StartCoroutine(ShowHistoryCoroutine());
+        historyUI.ShowHistory();
     }
 
-    private IEnumerator ShowHistoryCoroutine()
+
+
+    private IEnumerator ShowNoHistoryPopup()
     {
-        yield return null; // 1フレーム待つ（レイアウト更新のため）
-
-        historyUI.PopulateHistory(); // ← 履歴データの生成処理はここに移す
+        noHistoryPopup.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        noHistoryPopup.SetActive(false);
     }
-
 
 }

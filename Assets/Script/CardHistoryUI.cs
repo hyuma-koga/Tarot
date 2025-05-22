@@ -20,47 +20,93 @@ public class CardHistoryUI : MonoBehaviour
     {
         Debug.Log($"履歴の数: {TarotGameManager.historyList.Count} 件");
 
-        // パネルを先に表示（←ここが大事！）
         historyPanel.SetActive(true);
-
-        // 1フレーム待ってCanvas更新（LayoutGroupが反映されるように）
         yield return null;
 
-        // スクロールバーを表示
         if (verticalScrollbar != null)
             verticalScrollbar.gameObject.SetActive(true);
 
-        // 既存アイテム削除
         foreach (Transform child in contentParent)
         {
             Destroy(child.gameObject);
         }
 
-        // 履歴を表示
         foreach (var entry in TarotGameManager.historyList)
         {
             GameObject item = Instantiate(historyItemPrefab, contentParent);
             var texts = item.GetComponentsInChildren<TextMeshProUGUI>();
+            var image = item.GetComponentInChildren<Image>();
 
             if (texts.Length >= 5)
             {
-                texts[0].text = $"カード名：{entry.cardName}";
-                texts[1].text = entry.isReversed ? "逆位置" : "正位置";
-                texts[2].text = $"意味：{entry.meaning}";
-                texts[3].text = $"説明：{entry.description}";
-                texts[4].text = $"日付：{entry.date}";
+                texts[0].text = $"{entry.date}";
+                texts[1].text = $"{entry.cardName}";
+                texts[2].text = entry.isReversed ? "逆位置" : "正位置";
+                texts[3].text = $"{entry.meaning}";
+                texts[4].text = $"{entry.description}";
             }
             else
             {
                 Debug.LogWarning("CardHistoryItem 内の TextMeshProUGUI が足りません！");
             }
+
+            Transform imageTransform = item.transform.Find("CardImage");
+            if (imageTransform != null)
+            {
+                Image cardImage = imageTransform.GetComponent<Image>();
+                if (cardImage != null)
+                {
+                    Sprite sprite = Resources.Load<Sprite>("TarotImages/" + entry.imageName);
+                    if (sprite != null)
+                    {
+                        Debug.Log($"読み込み成功: TarotImages/{entry.imageName}");
+                        cardImage.sprite = sprite;
+                        cardImage.rectTransform.localRotation = entry.isReversed ? Quaternion.Euler(0, 0, 180) : Quaternion.identity;
+                        cardImage.preserveAspect = true;
+                    }
+                    else
+                    {
+                        Debug.LogWarning("画像が見つかりません: " + entry.imageName);
+                    }
+                }
+            }
+
+            // 意味・説明 背景パネル
+            Transform meaningBG = item.transform.Find("MeaningBackgroundPanel");
+            Transform descriptionBG = item.transform.Find("DiscriptionBackgroundPanel");
+
+            // 意味テキストの高さに合わせて背景サイズ調整
+            Transform meaningTextTransform = meaningBG?.Find("MeaningText");
+            if (meaningTextTransform != null)
+            {
+                TextMeshProUGUI meaningText = meaningTextTransform.GetComponent<TextMeshProUGUI>();
+                RectTransform meaningBGRect = meaningBG.GetComponent<RectTransform>();
+                if (meaningText != null && meaningBGRect != null)
+                {
+                    float targetHeight = meaningText.preferredHeight + 0f;
+                    meaningBGRect.sizeDelta = new Vector2(meaningBGRect.sizeDelta.x, targetHeight);
+                }
+            }
+
+            // 説明テキストの高さに合わせて背景サイズ調整
+            Transform descriptionTextTransform = descriptionBG?.Find("DescriptionText");
+            if (descriptionTextTransform != null)
+            {
+                TextMeshProUGUI descriptionText = descriptionTextTransform.GetComponent<TextMeshProUGUI>();
+                RectTransform descriptionBGRect = descriptionBG.GetComponent<RectTransform>();
+                if (descriptionText != null && descriptionBGRect != null)
+                {
+                    float targetHeight = descriptionText.preferredHeight + 0f;
+                    descriptionBGRect.sizeDelta = new Vector2(descriptionBGRect.sizeDelta.x, targetHeight);
+                }
+            }
         }
+
         RectTransform contentRect = contentParent.GetComponent<RectTransform>();
-        Debug.Log($"Contentの高さ: {contentRect.rect.height}");
-        // レイアウトを強制更新（念のため）
+        Debug.Log($"\ud83d\udccf Contentの高さ: {contentRect.rect.height}");
+
         Canvas.ForceUpdateCanvases();
 
-        // スクロール位置を一番上へ
         var scrollRect = GetComponentInChildren<ScrollRect>();
         if (scrollRect != null)
         {
@@ -106,6 +152,7 @@ public class CardHistoryUI : MonoBehaviour
                 Debug.LogWarning("CardHistoryItem 内の TextMeshProUGUI が足りません！");
             }
 
+            //画像処理
             Transform imageTransform = item.transform.Find("CardImage");
             if (imageTransform != null)
             {
@@ -130,11 +177,14 @@ public class CardHistoryUI : MonoBehaviour
                         Debug.LogWarning("Image コンポーネントが CardImage に見つかりません！");
                     }
                 }
-                else
-                {
-                    Debug.LogWarning("CardImage オブジェクトが見つかりません！");
-                }
             }
+
+            //意味・説明 背景パネル
+            Transform meaningBG = item.transform.Find("MeaningBackground");
+            Transform descriptionBG = item.transform.Find("DiscriptionBackground");
+
+            if (meaningBG != null) meaningBG.gameObject.SetActive(true);
+            if (descriptionBG != null) descriptionBG.gameObject.SetActive(true);
         }
 
         // デバッグ：Content高さ出力
